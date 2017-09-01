@@ -1,18 +1,21 @@
 CMAKE_MINIMUM_REQUIRED( VERSION 2.8 )
 
-SET( PROJECT "hello-obs" )
-SET( YPREFIX "/usr" )
+set( PROJECT "hello-obs" )
 
-SET( VERSION_MAJOR "0")
-SET( VERSION_MINOR "1" )
-SET( VERSION_PATCH "0" )
-SET( VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}${GIT_SHA1_VERSION}" )
+project(${PROJECT})
 
-SET( SOURCES src/main.cpp )
+# SET( PROJECT "hello-obs" )
+set( YPREFIX "/usr" )
 
-ADD_DEFINITIONS(-DVERSION="${VERSION}")
+set( VERSION_MAJOR "0")
+set( VERSION_MINOR "1" )
+set( VERSION_PATCH "0" )
+set( VERSION "${VERSION_MAJOR}.${VERSION_MINOR}.${VERSION_PATCH}${GIT_SHA1_VERSION}" )
 
-project ( ${PROJECT} )
-add_executable( ${PROJECT} ${SOURCES} )
+set( SOURCE_FILES src/main.cpp )
+
+add_definitions(-DVERSION="${VERSION}")
+
+add_executable( ${PROJECT} ${SOURCE_FILES} )
 
 install (TARGETS ${PROJECT} DESTINATION bin)
