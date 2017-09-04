@@ -1,3 +1,4 @@
 # Example Upstream Project for OBS
 
-This is an example project for the OBS Beginner's Guide.
+This is the "upstream" example project for the
+[OBS Beginner's Guide](http://openbuildservice.org/help/manuals/#beginner).
